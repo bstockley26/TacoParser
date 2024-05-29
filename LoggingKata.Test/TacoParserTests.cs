@@ -8,13 +8,13 @@ namespace LoggingKata.Test
         [Fact]
         public void ShouldReturnNonNullObject()
         {
-            //Arrange
+           
             var tacoParser = new TacoParser();
 
-            //Act
+            
             var actual = tacoParser.Parse("34.073638, -84.677017, Taco Bell Acwort...");
 
-            //Assert
+            
             Assert.NotNull(actual);
 
         }
@@ -28,21 +28,13 @@ namespace LoggingKata.Test
         
         public void ShouldParseLongitude(string line, double expected)
         {
-            // TODO: Complete the test with Arrange, Act, Assert steps below.
-            //       Note: "line" string represents input data we will Parse 
-            //       to extract the Longitude.  
-            //       Each "line" from your .csv file
-            //       represents a TacoBell location
+
             var tacoParser = new TacoParser();
 
             var actual = tacoParser.Parse(line).Location.Longitude;
             
             Assert.Equal(expected, actual);
-            //Arrange
-
-            //Act
-
-            //Assert
+            
         }
 
         [Theory]
@@ -61,7 +53,7 @@ namespace LoggingKata.Test
             Assert.Equal(expected, actual);
         }
 
-        //TODO: Create a test called ShouldParseLatitude
+        
 
     }
 }
